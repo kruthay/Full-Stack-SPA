@@ -1,0 +1,67 @@
+<!--HTML for survey list component-->
+
+<h1>List of Surveys </h1>
+
+<div class="formcomplete">
+<br>
+
+<br>
+<br>
+<table> 
+    <thead>
+        <tr>
+            <th> First Name </th>
+            <th> Last Name </th>
+            <th> Address </th>
+            <th> Phone </th>
+            <th> Email </th>
+            <th> Date </th>
+            <th> Rating </th>
+            <th> Likes </th>
+            <th> Know </th>
+            <th>Comment </th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of students">
+            <td> {{student.fname}}</td>
+            <td> {{student.lname}}</td>
+            <td> {{student.address}} , {{student.city}} , {{student.state}} , {{student.zip}}</td>
+            <td> {{student.phone}}</td>
+            <td> {{student.email}}</td>
+            <td> {{student.date}}</td>
+            <td> {{student.know}} </td>
+            <td> 
+                <div *ngIf="student.campus;">
+                    Students
+                </div>
+                <div *ngIf="student.campus1;">
+                    Location
+                </div>
+                <div *ngIf="student.campus2;">
+                    Campus
+                </div>
+                <div *ngIf="student.campus3;">
+                    Atmosphere  
+                </div>
+                <div *ngIf="student.campus4;">
+                    Dorm Rooms
+                </div>
+                <div *ngIf="student.campus5;">
+                    Sports
+                </div>
+                </td>
+                    
+            <td> {{student.rating}} {{student.rating1}} {{student.rating2}} {{student.rating3}}</td>
+            
+                <td> {{student.comment}}</td>
+
+                <td>
+                    <button (click) = "updateStudent(student.id)"> Update </button>
+                    </td>
+
+        </tr>
+    </tbody>
+</table>
+</div>

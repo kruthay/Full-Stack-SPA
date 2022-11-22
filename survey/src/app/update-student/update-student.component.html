@@ -1,0 +1,69 @@
+<!--HTML for student update component-->
+
+<body>
+    <div class="formcomplete">
+
+    <form (ngSubmit) = "onSubmit()" method="post" autocomplete="on">
+          <h1>Student Survey Form Update</h1>
+          <label for="fname"> First name:* </label>
+          <input type="text" id="fname" name="fname" 
+          [(ngModel)] = "student.fname"
+          required="" autofocus="">
+          <label for="lname"> Last name:* </label>
+          <input type="text" id="lname" name="lname" required="" autofocus="" [(ngModel)] = "student.lname"><br><br>
+       <label  for="address">Street Address</label>
+       <input id = "full" type="text" id="address" name="address" placeholder="Street, Apt, and Area" [(ngModel)] = "student.address"><br><br>
+       <label for="city">City</label>
+       <input type="text" id="city" name="city" [(ngModel)] = "student.city">
+       <label for="state">State</label>
+       <input type="text" id="state" name="state" [(ngModel)] = "student.state">
+       <label for="zip">ZIP</label>
+       <input type="text" id="zip" name="zip" placeholder="your 5 digit zip" [(ngModel)] = "student.zip"><br><br>
+       <label for="phone">Phone Number:<span class="asterisk">*</span></label>
+       <input type="tel" id="phone" name="phone" placeholder="000-000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required="" [(ngModel)] = "student.phone">
+       <label for="email">Email:<span class="asterisk">*</span></label>
+       <input type="email" id="email" name="email" placeholder="username@mail.com" required="" [(ngModel)] = "student.email"><br><br>
+       <label for="date1">Date of Survey:</label>
+       <input type="date" id="date1" name="date1" [(ngModel)] = "student.date">
+       <p> How likely you recommend this university ? 
+       <select name = "know" [(ngModel)] = "student.know">
+       <option value="very">Very Likely</option>
+       <option value="normal">Likely</option>
+       <option value="no">Unlikely</option>
+       </select>
+       </p>
+       <p>What did you like about the campus?</p>
+       <input type="checkbox" name="campus" value = "Students" [(ngModel)] = "student.campus">Students
+       <input type="checkbox" name="campus1" value = "Location" [(ngModel)] = "student.campus1">Location
+       <input type="checkbox" name="campus2" value = "Campus" [(ngModel)] = "student.campus2">Campus
+       <input type="checkbox" name="campus3" value = "Atmosphere" [(ngModel)] = "student.campus3">Atmosphere
+       <input type="checkbox" name="campus4" value = "Dorm Rooms" [(ngModel)] = "student.campus4">Dorm Rooms
+       <input type="checkbox" name="campus5" value = "Sports" [(ngModel)] = "student.campus5">Sports<br>
+       
+       <p>How did you know about university?</p>
+       <input type="radio" name="rating" value = "Friends" [(ngModel)] = "student.rating">Friends
+       <input type="radio" name="rating1" value = "Television" [(ngModel)] = "student.rating1">Television
+       <input type="radio" name="rating2" value = "Internet" [(ngModel)] = "student.rating2">Internet
+       <input type="radio" name="rating3" value = "Other" [(ngModel)] = "student.rating3">Other<br>
+       
+      <p> Enter a number from 1 - 100 to win a Movie Ticket 
+       <input type="number" value="0" min = "0" max = "100" name= "ruffle" [(ngModel)] = "student.ruffle"/>
+       </p>
+       <p>Additional Comments</p>
+       <textarea name ="comment" placeholder = "Enter your comment" [(ngModel)] = "student.comment" >
+       </textarea>
+                <br>
+       <button type="submit" value="Submit">Submit</button>
+      <button type="reset" value="Reset">Reset</button>
+          
+       <br>
+             <p> <span class="asterisk">*</span> Indicates required fields.</p>
+
+      
+    </form>
+    </div>
+</body>
+    
+
+    
+  

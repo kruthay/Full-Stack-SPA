@@ -1,0 +1,21 @@
+/* Style for the whole application */
+
+
+h1{
+
+	text-align:center;
+}
+
+
+/*styling used for main div in body*/
+.formcomplete{
+	display: flex;
+    justify-content: space-between;	
+    background:aqua;
+}
+
+/*styling used for baground color of html page*/
+body{
+	background:antiquewhite;
+	text-align: center;
+}

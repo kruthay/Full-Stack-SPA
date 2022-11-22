@@ -1,0 +1,43 @@
+/* Style for the student update component */
+
+
+/*style for h1 tag which will have sold green border and shadow to left top*/
+h1{
+	border: 5px solid black;
+	text-align:center;
+}
+
+/*styling used for main div in body*/
+.formcomplete{
+	display: flex;
+    justify-content: center;	
+}
+
+/*styling used for baground color of html page*/
+body{
+	background:antiquewhite;
+	text-align: center;
+}
+
+#full{
+	width:100%;
+}
+form{
+background:aqua;
+padding : 20px;
+}
+button{
+margin-left : 20px;
+margin-right : 20px;
+
+}
+
+
+textarea {
+  width : 100%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}

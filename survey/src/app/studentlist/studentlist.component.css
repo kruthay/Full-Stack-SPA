@@ -1,0 +1,28 @@
+/* Style for the List component */
+
+th, td {
+	border: 1px solid black;
+	padding: 8px;
+}
+
+thead th {
+  width: 25%;
+}
+
+h1{
+	border: 5px solid black;
+	text-align:center;
+}
+
+/*styling used for main div in body*/
+.formcomplete{
+	display: flex;
+    justify-content: center;
+	background:aqua;	
+}
+
+/*styling used for baground color of html page*/
+body{
+	background:antiquewhite;
+	text-align: center;
+}
