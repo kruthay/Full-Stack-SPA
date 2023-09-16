@@ -26,10 +26,20 @@ Then, used Rancher and EC2 instances to create a cluster and deployed the applic
 Used VSCode to create angular application. Developed four components: Create-Survey, Student list, update-survey, and welcome page for our application.
 Each component has its CSS and .ts files, which add functionality to the application.
 Created a dockerfile with following content.
-FROM nginx:1.17.1-alpine
+FROM nginx:1.17.1-alpine 
 COPY nginx.conf /etc/nginx/nginx.conf COPY /dist/survey /usr/share/nginx/html
 nginx.conf file :
-events{} http { include /etc/nginx/mime.types; server { listen 80; server_name localhost; root /usr/share/nginx/html; index index.html; location / { try_files $uri $uri/ /index.html; } } }
+events{} 
+http
+{ 
+include /etc/nginx/mime.types; 
+server { listen 80; 
+server_name localhost; 
+root /usr/share/nginx/html; 
+index index.html; 
+location / { try_files $uri $uri/ /index.html; } 
+} 
+}
 Dockerised it and pushed it to Dockerusername/angsurv:0.7
 Then used Rancher and EC2 machines to create a cluster, and the application is not currently running at the url
 ## References:
